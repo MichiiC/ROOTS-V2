@@ -19,7 +19,6 @@ public class PlayerInput : MonoBehaviour
     public GameObject camera;
 
     public GameObject descriptionPanel;
-
     public GameObject descriptionPanelText;
 
 
@@ -76,7 +75,11 @@ public class PlayerInput : MonoBehaviour
                 GameObject go = hit.transform.gameObject;
 
                 Animator cameraAnimator = camera.GetComponent<Animator>();
+                Animator descriptionPanelAnimator = descriptionPanel.GetComponent<Animator>();
 
+                Text descriptionText = descriptionPanelText.GetComponent<Text>();
+
+                
 
 
 
@@ -88,6 +91,7 @@ public class PlayerInput : MonoBehaviour
                     case "Fork Lift":
 
                         cameraAnimator.Play("CameraMoveBackFromForkLift");
+                        //descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
                         selectedObject = "";
 
@@ -146,7 +150,10 @@ public class PlayerInput : MonoBehaviour
                 {
 
                     cameraAnimator.Play("CameraMoveToForkLift");
-
+                    
+                    descriptionText.text = "dfdfdfdfdfdf";
+                    descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
+                    
                     selectedObject = "Fork Lift";
 
                 }
