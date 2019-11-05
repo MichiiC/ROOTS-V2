@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - Tree
   - Well
+  - Tools
   layers:
   - Default
   - TransparentFX
