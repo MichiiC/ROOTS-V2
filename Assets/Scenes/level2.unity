@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 800356373}
-  m_IndirectSpecularColor: {r: 0.45110965, g: 0.5009104, b: 0.5740295, a: 1}
+  m_IndirectSpecularColor: {r: 0.45110947, g: 0.5009102, b: 0.57402885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -62911,7 +62911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0.000024795532}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0.000024795532}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.49999994, y: 0.5000001}
 --- !u!114 &1191756110
@@ -81803,7 +81803,7 @@ GameObject:
   - component: {fileID: 1474699416}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95915,6 +95915,7 @@ MonoBehaviour:
   camera: {fileID: 1474699412}
   descriptionPanel: {fileID: 1037288130}
   descriptionPanelText: {fileID: 126358126}
+  toolIcon: {fileID: 0}
   selectedObject: 
 --- !u!1 &1743403387
 GameObject:

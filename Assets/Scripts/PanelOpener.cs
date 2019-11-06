@@ -8,6 +8,8 @@ public class PanelOpener : MonoBehaviour
 
     public void OpenPanel()
     {
+        print("q panel clicked");
+        
         if (Panel != null)
         {
             bool isActive = Panel.activeSelf;

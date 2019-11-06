@@ -20,6 +20,11 @@ public class PlayerInput : MonoBehaviour
 
     public GameObject descriptionPanel;
     public GameObject descriptionPanelText;
+
+    public GameObject toolIcon;
+
+    private bool toolSelected;
+    private bool grassSelected;
  
 
 
@@ -32,7 +37,8 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
 
-
+        toolSelected = false;
+        grassSelected = false;
 
     }
 
@@ -45,6 +51,11 @@ public class PlayerInput : MonoBehaviour
 
         m_SelectObject();
 
+
+        if ( toolSelected == true && 
+             grassSelected == true ) {
+            Application.LoadLevel("Level2");
+        }
     }
 
 
@@ -212,6 +223,7 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil.Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    grassSelected = true;
                     selectedObject = "Grass";
 
                 }
@@ -267,6 +279,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Many caution signs are put up where construction or facilities that deal with hazardours or toxic material and disposables. These hazardous and toxic  material affects our environment especially trees which can suck up these harmful toxins and killing them. ";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite toolActiveSprite = Resources.Load <Sprite>("ObjectIcons/Tool_Icon_Active");
+                    UnityEngine.UI.Image toolIconImage = toolIcon.GetComponent<UnityEngine.UI.Image>();
+                    toolIconImage.sprite = toolActiveSprite;
+
+                    grassSelected = true;
                     selectedObject = "Tools";
 
                 }
