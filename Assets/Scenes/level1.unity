@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.039244857, g: 0.070202164, b: 0.12508565, a: 1}
+  m_IndirectSpecularColor: {r: 0.03925715, g: 0.0702041, b: 0.12507775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -457,6 +457,10 @@ MonoBehaviour:
   descriptionPanel: {fileID: 2025243956}
   descriptionPanelText: {fileID: 2127084122}
   toolIcon: {fileID: 1480523544}
+  abandonIcon: {fileID: 475339945}
+  grassIcon: {fileID: 1597384953}
+  lightsIcon: {fileID: 1141645063}
+  smokeIcon: {fileID: 1264916762}
   selectedObject: 
 --- !u!95 &278360566
 Animator:
@@ -778,7 +782,7 @@ GameObject:
   - component: {fileID: 475339948}
   - component: {fileID: 475339947}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: AbandonIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,7 +827,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: df41dfce31307cc43bc0993d922f84f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f3a01e9fc5d25241ad070143a6c9fe8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1579,8 +1583,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8679245, g: 0.84502447, b: 0.27429688, a: 1}
+    m_PressedColor: {r: 1, g: 0.9273536, b: 0.5235849, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1676,7 +1680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1649ec73e6784ddbb9b45e0479c9cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cluePanelText: {fileID: 1017109131}
+  cluePanelText: {fileID: 1776136147}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1810,7 @@ GameObject:
   - component: {fileID: 1017109132}
   - component: {fileID: 1017109135}
   m_Layer: 5
-  m_Name: QluePanel
+  m_Name: CluePanelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,8 +1870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 24.400024, y: 26.850006}
-  m_SizeDelta: {x: -62.700012, y: 45.700012}
+  m_AnchoredPosition: {x: -23.02, y: 26.850006}
+  m_SizeDelta: {x: -109.16, y: 45.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017109135
 MonoBehaviour:
@@ -1894,7 +1898,7 @@ GameObject:
   - component: {fileID: 1141645066}
   - component: {fileID: 1141645065}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: LightsIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,7 +2373,7 @@ GameObject:
   - component: {fileID: 1264916765}
   - component: {fileID: 1264916764}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: SmokeIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3144,7 +3148,7 @@ GameObject:
   - component: {fileID: 1597384956}
   - component: {fileID: 1597384955}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: GrassIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3512,7 +3516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CLUE TEXT
+  m_Text: 
 --- !u!222 &1776136150
 CanvasRenderer:
   m_ObjectHideFlags: 0

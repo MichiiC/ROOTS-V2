@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 using UnityEngine.UIElements;
 
+using UnityEngine.SceneManagement;
+
 
 
 public class PlayerInput : MonoBehaviour
@@ -22,10 +24,21 @@ public class PlayerInput : MonoBehaviour
     public GameObject descriptionPanelText;
 
     public GameObject toolIcon;
+    public GameObject abandonIcon;
+    public GameObject grassIcon;
+    public GameObject lightsIcon;
+    public GameObject smokeIcon;
 
-    private bool toolSelected;
+
+
+
+    private bool toolsSelected;
     private bool grassSelected;
- 
+    private bool abandonSelected;
+    private bool lightsSelected;
+    private bool smokeSelected;
+
+
 
 
     public string selectedObject = "";
@@ -37,8 +50,11 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
 
-        toolSelected = false;
+        toolsSelected = false;
         grassSelected = false;
+        abandonSelected = false;
+        lightsSelected = false;
+        smokeSelected = false;
 
     }
 
@@ -52,9 +68,13 @@ public class PlayerInput : MonoBehaviour
         m_SelectObject();
 
 
-        if ( toolSelected == true && 
-             grassSelected == true ) {
-            Application.LoadLevel("Level2");
+        if ( toolsSelected == true && 
+             grassSelected == true &&
+             abandonSelected == true &&
+             lightsSelected == true &&
+             smokeSelected == true ) {
+             SceneManager.LoadScene("level2");
+
         }
     }
 
@@ -207,8 +227,9 @@ public class PlayerInput : MonoBehaviour
 
                     cameraAnimator.Play("CameraMoveToForkLift");
                     
-                    descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil. Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
-                    descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
+                   //descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil. Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
+                   // descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
+                    
                     
                     selectedObject = "Fork Lift";
 
@@ -222,6 +243,10 @@ public class PlayerInput : MonoBehaviour
 
                     descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil.Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
+
+                    Sprite grassActiveSprite = Resources.Load<Sprite>("ObjectIcons/Grass_Icon_Active");
+                    UnityEngine.UI.Image grassIconImage = grassIcon.GetComponent<UnityEngine.UI.Image>();
+                    grassIconImage.sprite = grassActiveSprite;
 
                     grassSelected = true;
                     selectedObject = "Grass";
@@ -237,7 +262,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Frequently trees are felled to create space to make buildings. It is much better for the trees if we reused the space taken up by abandoned buildings, or just refurbished them (if possible). ";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite abandonActiveSprite = Resources.Load<Sprite>("ObjectIcons/Abandon_Icon_Active");
+                    UnityEngine.UI.Image abandonIconImage = abandonIcon.GetComponent<UnityEngine.UI.Image>();
+                    abandonIconImage.sprite = abandonActiveSprite;
 
+                    abandonSelected = true;
                     selectedObject = "Abandon";
 
                     
@@ -253,6 +282,11 @@ public class PlayerInput : MonoBehaviour
                         descriptionText.text = "Car or truck emissions effect plant life due to trees and other plants make their own food from carbon dioxide, water, sunlight, and elements found in soil  and then release oxygen for humans and animals to breathe. But exhaust fumes can also affect them by producing carbon monoxide, nitrogen dioxide (contributes to acidic rain), soot, and more.";
                         descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                        Sprite smokeActiveSprite = Resources.Load<Sprite>("ObjectIcons/Smoke_Icon_Active");
+                        UnityEngine.UI.Image smokeIconImage = smokeIcon.GetComponent<UnityEngine.UI.Image>();
+                        smokeIconImage.sprite = smokeActiveSprite;
+
+                        smokeSelected = true;
                         selectedObject = "Smoke";
 
                     }
@@ -266,6 +300,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "The lighting on a construction site is liekly to be powered by generators which work by burning fuel and giving off harmful emissions, which can damage and pollute the local environment. Many insects are also frawn to light, but artificial lights can create a fatal attraction. Declining inspect populations negatively impacts all species that rely on insects for food or pollination.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite lightsActiveSprite = Resources.Load<Sprite>("ObjectIcons/Lights_Icon_Active");
+                    UnityEngine.UI.Image lightsIconImage = lightsIcon.GetComponent<UnityEngine.UI.Image>();
+                    lightsIconImage.sprite = lightsActiveSprite;
+
+                    lightsSelected = true;
                     selectedObject = "Lights";
 
                 }
@@ -283,7 +322,7 @@ public class PlayerInput : MonoBehaviour
                     UnityEngine.UI.Image toolIconImage = toolIcon.GetComponent<UnityEngine.UI.Image>();
                     toolIconImage.sprite = toolActiveSprite;
 
-                    grassSelected = true;
+                    toolsSelected = true;
                     selectedObject = "Tools";
 
                 }
