@@ -8,5 +8,6 @@ public class Quit : MonoBehaviour
     {
         Debug.Log("has quit game");
         Application.Quit();
+        
     }
 }

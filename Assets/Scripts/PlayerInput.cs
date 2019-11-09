@@ -29,6 +29,11 @@ public class PlayerInput : MonoBehaviour
     public GameObject lightsIcon;
     public GameObject smokeIcon;
 
+    public GameObject birdIcon;
+    public GameObject treeIcon;
+    public GameObject dogIcon;
+    public GameObject wellIcon;
+    public GameObject groundIcon;
 
 
 
@@ -38,7 +43,11 @@ public class PlayerInput : MonoBehaviour
     private bool lightsSelected;
     private bool smokeSelected;
 
-
+    private bool birdSelected;
+    private bool treeSelected;
+    private bool dogSelected;
+    private bool wellSelected;
+    private bool groundSelected;
 
 
     public string selectedObject = "";
@@ -56,6 +65,12 @@ public class PlayerInput : MonoBehaviour
         lightsSelected = false;
         smokeSelected = false;
 
+        birdSelected = false;
+        treeSelected = false;
+        dogSelected = false;
+        wellSelected = false;
+        groundSelected = false;
+
     }
 
 
@@ -68,14 +83,22 @@ public class PlayerInput : MonoBehaviour
         m_SelectObject();
 
 
-        if ( toolsSelected == true && 
+        if (toolsSelected == true &&
              grassSelected == true &&
              abandonSelected == true &&
              lightsSelected == true &&
-             smokeSelected == true ) {
-             SceneManager.LoadScene("level2");
-
+             smokeSelected == true)
+        {
+            SceneManager.LoadScene("level2");
         }
+            if (birdSelected == true &&
+             treeSelected == true &&
+             dogSelected == true &&
+             wellSelected == true &&
+             groundSelected == true)
+            {
+                SceneManager.LoadScene("level3");
+            }
     }
 
 
@@ -336,6 +359,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Animals - Certain herbivores dig up or eat seeds before they make it into the ground, preventing tree grouwth before it even begins.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite dogActiveSprite = Resources.Load<Sprite>("ObjectIcons/Dog_Icon_Active");
+                    UnityEngine.UI.Image dogIconImage = dogIcon.GetComponent<UnityEngine.UI.Image>();
+                    dogIconImage.sprite = dogActiveSprite;
+
+                    dogSelected = true;
                     selectedObject = "Dog";
 
                 }
@@ -349,6 +377,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Due to the lack of water in the desert, the dry wood is excellent fuel for a fire.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite treeActiveSprite = Resources.Load<Sprite>("ObjectIcons/Tree_Icon_Active");
+                    UnityEngine.UI.Image treeIconImage = treeIcon.GetComponent<UnityEngine.UI.Image>();
+                    treeIconImage.sprite = treeActiveSprite;
+
+                    treeSelected = true;
                     selectedObject = "Tree";
 
                 }
@@ -362,6 +395,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "The desert floor is often sandy, rocky, or filled with clay, and in the case of the southwest United States, is very alkaline. These characteristics make it difficult for trees to grow, because most trees we are familiar with require a more acidic soil, and much more water than the desert can provide.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite groundActiveSprite = Resources.Load<Sprite>("ObjectIcons/Ground_Icon_Active");
+                    UnityEngine.UI.Image groundIconImage = groundIcon.GetComponent<UnityEngine.UI.Image>();
+                    groundIconImage.sprite = groundActiveSprite;
+
+                    groundSelected = true;
                     selectedObject = "Ground";
 
                 }
@@ -375,6 +413,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "Heat from the sun casees water to evaporate, dehydrating the trees. This makes it difficult for the trees to create enought food to survive, while also increasing the risk of fires.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite wellActiveSprite = Resources.Load<Sprite>("ObjectIcons/Well_Icon_Active");
+                    UnityEngine.UI.Image wellIconImage = wellIcon.GetComponent<UnityEngine.UI.Image>();
+                    wellIconImage.sprite = wellActiveSprite;
+
+                    wellSelected = true;
                     selectedObject = "Well";
 
                 }
@@ -388,6 +431,11 @@ public class PlayerInput : MonoBehaviour
                     descriptionText.text = "As animals leave the area populated by trees, the trees can no longer use them to speread their seeds around, making it more difficult to cover more area.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
+                    Sprite birdActiveSprite = Resources.Load<Sprite>("ObjectIcons/Bird_Icon_Active");
+                    UnityEngine.UI.Image birdIconImage = birdIcon.GetComponent<UnityEngine.UI.Image>();
+                    birdIconImage.sprite = birdActiveSprite;
+
+                    birdSelected = true;
                     selectedObject = "Bird";
 
                 }
