@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -256, y: -541.3}
+  m_AnchoredPosition: {x: -271.68, y: -501.68}
   m_SizeDelta: {x: 235.45001, y: 70.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309882310
@@ -778,10 +778,10 @@ RectTransform:
   m_Father: {fileID: 1798370120}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.7, y: 11.5}
-  m_SizeDelta: {x: 174.97, y: 174.97}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789886028
 MonoBehaviour:
@@ -979,7 +979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 375.8, y: -435.69998}
+  m_AnchoredPosition: {x: 302.8, y: -371.4}
   m_SizeDelta: {x: 190.30005, y: 35.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017580280
@@ -1469,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 375.8, y: -373.9}
+  m_AnchoredPosition: {x: 302.8, y: -309.6}
   m_SizeDelta: {x: 316.19995, y: 66.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220480550
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 1686909531}
   - component: {fileID: 1686909530}
   m_Layer: 0
-  m_Name: Autumn Forest Stillness  Birds Singing, Colorful Trees,
+  m_Name: Autumn Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,7 +1824,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d83302534be92a48b214fa02c405100, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e208ae6ae2787424494e318050876591, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1964,7 +1964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 377, y: -540.3}
+  m_AnchoredPosition: {x: 304, y: -476}
   m_SizeDelta: {x: 190.30005, y: 35.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772608824
@@ -2271,7 +2271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 377, y: -488}
+  m_AnchoredPosition: {x: 304, y: -423.7}
   m_SizeDelta: {x: 190.30005, y: 35.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787046873
@@ -2572,8 +2572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -276, y: -279}
-  m_SizeDelta: {x: 234.1, y: 234.09998}
+  m_AnchoredPosition: {x: -246.75, y: -218}
+  m_SizeDelta: {x: 185.6, y: 185.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798370121
 MonoBehaviour:

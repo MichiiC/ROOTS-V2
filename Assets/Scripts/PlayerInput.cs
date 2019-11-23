@@ -10,6 +10,8 @@ using UnityEngine.UIElements;
 
 using UnityEngine.SceneManagement;
 
+using UnityEngine.EventSystems;
+
 
 
 public class PlayerInput : MonoBehaviour
@@ -116,6 +118,8 @@ public class PlayerInput : MonoBehaviour
         {
 
 
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -264,7 +268,7 @@ public class PlayerInput : MonoBehaviour
 
                     cameraAnimator.Play("CameraMoveToGrass");
 
-                    descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil.Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
+                    descriptionText.text = "All Plants have roots that are used to abosrb water and other nutrients from the soil.Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
                     Sprite grassActiveSprite = Resources.Load<Sprite>("ObjectIcons/Grass_Icon_Active");
@@ -356,7 +360,7 @@ public class PlayerInput : MonoBehaviour
 
                     cameraAnimator.Play("CameraMoveToDog");
 
-                    descriptionText.text = "Animals - Certain herbivores dig up or eat seeds before they make it into the ground, preventing tree grouwth before it even begins.";
+                    descriptionText.text = "Certain herbivores dig up or eat seeds before they make it into the ground, preventing tree grouwth before it even begins.";
                     descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
 
                     Sprite dogActiveSprite = Resources.Load<Sprite>("ObjectIcons/Dog_Icon_Active");
