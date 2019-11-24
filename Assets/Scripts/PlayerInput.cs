@@ -240,6 +240,14 @@ public class PlayerInput : MonoBehaviour
                         selectedObject = "";
 
                         break;
+                    case "Jug":
+
+                        cameraAnimator.Play("CameraMoveBackFromJug");
+                        //descriptionPanelAnimator.Play("DescriptionPanelSlideIn");
+
+                        selectedObject = "";
+
+                        break;
                     default:
 
                         break;
@@ -441,6 +449,19 @@ public class PlayerInput : MonoBehaviour
 
                     birdSelected = true;
                     selectedObject = "Bird";
+
+                }
+                if (go.CompareTag("Jug"))
+
+                {
+
+                    cameraAnimator.Play("CameraMoveToJug");
+
+                    //descriptionText.text = "Grass - All Plants have roots that are used to abosrb water and other nutrients from the soil. Unfortunately, the soil has a limited amount of these resourcces, and that means that all the plants in  an area need to compete for these resources. Grass usually wins this fight, because it covers so much more surface area, it chokes the trees out.";
+                    // descriptionPanelAnimator.Play("DescriptionPanelSlideOut");
+
+
+                    selectedObject = "Jug";
 
                 }
 

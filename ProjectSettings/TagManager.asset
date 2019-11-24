@@ -18,6 +18,7 @@ TagManager:
   - Tools
   - PauseMenu
   - Tool
+  - Jug
   layers:
   - Default
   - TransparentFX
