@@ -37,6 +37,15 @@ public class PlayerInput : MonoBehaviour
     public GameObject wellIcon;
     public GameObject groundIcon;
 
+    public RectTransform mPanelCompleteLevel;
+    public Text mTxtCompleteLevel;
+    public event EventHandler CompleteLevelEvent;
+    private void CompleteLevel()
+    {
+        if (CompleteLevel != null)
+            CompleteLevel(this, EventArgs.Empty);
+    }
+
 
 
     private bool toolsSelected;
@@ -54,7 +63,14 @@ public class PlayerInput : MonoBehaviour
 
     public string selectedObject = "";
 
-
+    public bool CompleteLevel
+    {
+        get
+        {
+            if (selectedObject = "")
+                return true;
+        }
+    }
 
     // Start is called before the first frame update
 
