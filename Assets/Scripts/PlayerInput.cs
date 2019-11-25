@@ -18,7 +18,7 @@ public class PlayerInput : MonoBehaviour
 
 {
 
-
+    public GameObject CompleteLevelPanel;
 
     public GameObject camera;
 
@@ -37,6 +37,7 @@ public class PlayerInput : MonoBehaviour
     public GameObject wellIcon;
     public GameObject groundIcon;
 
+    /*
     public RectTransform mPanelCompleteLevel;
     public Text mTxtCompleteLevel;
     public event EventHandler CompleteLevelEvent;
@@ -45,7 +46,7 @@ public class PlayerInput : MonoBehaviour
         if (CompleteLevel != null)
             CompleteLevel(this, EventArgs.Empty);
     }
-
+    */
 
 
     private bool toolsSelected;
@@ -63,6 +64,7 @@ public class PlayerInput : MonoBehaviour
 
     public string selectedObject = "";
 
+    /*
     public bool CompleteLevel
     {
         get
@@ -71,6 +73,7 @@ public class PlayerInput : MonoBehaviour
                 return true;
         }
     }
+    */
 
     // Start is called before the first frame update
 
@@ -107,7 +110,11 @@ public class PlayerInput : MonoBehaviour
              lightsSelected == true &&
              smokeSelected == true)
         {
-            SceneManager.LoadScene("level2");
+
+            if (CompleteLevelPanel != null && !CompleteLevelPanel.active) {
+                bool isActive = CompleteLevelPanel.activeSelf;
+                CompleteLevelPanel.SetActive(!isActive);
+            }
         }
             if (birdSelected == true &&
              treeSelected == true &&
