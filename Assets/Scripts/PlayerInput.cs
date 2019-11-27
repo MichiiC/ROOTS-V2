@@ -116,14 +116,18 @@ public class PlayerInput : MonoBehaviour
                 CompleteLevelPanel.SetActive(!isActive);
             }
         }
-            if (birdSelected == true &&
-             treeSelected == true &&
-             dogSelected == true &&
-             wellSelected == true &&
-             groundSelected == true)
+        if (birdSelected == true &&
+         treeSelected == true &&
+         dogSelected == true &&
+         wellSelected == true &&
+         groundSelected == true)
+        {
+            if (CompleteLevelPanel != null && !CompleteLevelPanel.active)
             {
-                SceneManager.LoadScene("level3");
+                bool isActive = CompleteLevelPanel.activeSelf;
+                CompleteLevelPanel.SetActive(!isActive);
             }
+        }
     }
 
 
